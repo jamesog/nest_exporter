@@ -124,7 +124,7 @@ func main() {
 	case starlingAPIURLEnv != "":
 		starlingAPI = starlingAPIURLEnv
 	default:
-		log.Fatal().Msg("Starling API not set; must set either STARLING_API_KEY or --starling.api")
+		log.Fatal().Msg("Starling API not set; must set either STARLING_API_URL or --starling.api")
 	}
 
 	if starlingAPIKey == "" {
