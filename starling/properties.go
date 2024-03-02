@@ -31,6 +31,7 @@ type TemperatureSensorProperties struct {
 }
 
 type ProtectProperties struct {
+	CommonProperties
 	BatteryStatus     string `json:"batteryStatus"`
 	CODetected        bool   `json:"coDetected"`
 	ManualTestActive  bool   `json:"manualTestActive"`
