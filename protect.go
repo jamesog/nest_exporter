@@ -72,7 +72,7 @@ func protectMetrics(protect starling.ProtectProperties, ch chan<- prometheus.Met
 	ch <- prometheus.MustNewConstMetric(
 		protectBatteryLow,
 		prometheus.GaugeValue,
-		boolToFloat64(protect.batteryStatus == "low"),
+		boolToFloat64(protect.BatteryStatus == "low"),
 		protect.ID, protect.Name, protect.Where,
 	)
 }
