@@ -19,7 +19,7 @@ import (
 const (
 	namespace           = "nest"
 	subsystemThermostat = "thermostat"
-	subsystemThermostat = "protect"
+	subsystemProtect    = "protect"
 )
 
 var (
