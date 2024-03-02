@@ -1,4 +1,4 @@
-package mainprotectLabels
+package main
 
 import (
 	"github.com/jamesog/nest_exporter/starling"
