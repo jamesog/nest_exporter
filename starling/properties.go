@@ -37,6 +37,8 @@ type ProtectProperties struct {
 	ManualTestActive  bool   `json:"manualTestActive"`
 	OccupancyDetected bool   `json:"occupancyDetected"`
 	SmokeDetected     bool   `json:"smokeDetected"`
+	COStateDetail     string `json:"coStateDetail"`
+	SmokeStateDetail  string `json:"smokeStateDetail"`
 }
 
 type CameraProperties struct {
