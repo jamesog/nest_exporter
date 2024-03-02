@@ -31,11 +31,14 @@ type TemperatureSensorProperties struct {
 }
 
 type ProtectProperties struct {
+	CommonProperties
 	BatteryStatus     string `json:"batteryStatus"`
 	CODetected        bool   `json:"coDetected"`
 	ManualTestActive  bool   `json:"manualTestActive"`
 	OccupancyDetected bool   `json:"occupancyDetected"`
 	SmokeDetected     bool   `json:"smokeDetected"`
+	COStateDetail     string `json:"coStateDetail"`
+	SmokeStateDetail  string `json:"smokeStateDetail"`
 }
 
 type CameraProperties struct {

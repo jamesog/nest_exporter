@@ -22,7 +22,7 @@ The exporter binds to `:3081` by default. This can be changed with the `--listen
 
 - [x] Nest Thermostat
 - [ ] Nest Temperature Sensor
-- [ ] Nest Protect
+- [x] Nest Protect
 - [ ] Nest Camera
 - [ ] Nest Guard
 - [ ] Nest x Yale Lock

@@ -9,15 +9,17 @@ import (
 	"github.com/rs/zerolog/hlog"
 	"github.com/rs/zerolog/log"
 
-	flag "github.com/spf13/pflag"
 	"net/http"
 	"os"
 	"time"
+
+	flag "github.com/spf13/pflag"
 )
 
 const (
 	namespace           = "nest"
 	subsystemThermostat = "thermostat"
+	subsystemProtect    = "protect"
 )
 
 var (
@@ -78,6 +80,12 @@ func (e Collector) Collect(ch chan<- prometheus.Metric) {
 				continue
 			}
 			thermostatMetrics(*t, ch)
+		case "protect":
+			t, err := e.starlingClient.ProtectProperties(device.ID)
+			if err != nil {
+				continue
+			}
+			protectMetrics(*t, ch)
 		default:
 			log.Warn().Str("type", device.Type).Msg("unsupported device type")
 		}

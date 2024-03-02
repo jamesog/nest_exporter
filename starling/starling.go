@@ -164,6 +164,26 @@ func (c Client) ThermostatProperties(id string) (*ThermostatProperties, error) {
 	return &device.Properties, nil
 }
 
+type ProtectResponse struct {
+	Status     string            `json:"status"`
+	Properties ProtectProperties `json:"properties"`
+}
+
+func (c Client) ProtectProperties(id string) (*ProtectProperties, error) {
+	resp, err := c.deviceProperties(id)
+	if err != nil {
+		return nil, err
+	}
+
+	device := ProtectResponse{}
+	err = json.Unmarshal(resp, &device)
+	if err != nil {
+		return nil, err
+	}
+
+	return &device.Properties, nil
+}
+
 type Error struct {
 	Status  string `json:"status,omitempty"`
 	Code    string `json:"code,omitempty"`
