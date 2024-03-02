@@ -41,13 +41,13 @@ var (
 		nil,
 	)
 	protectCOStateDetail = prometheus.NewDesc(
-		prometheus.BuildFQName(namespace, subsystemProtect, "battery_low"),
+		prometheus.BuildFQName(namespace, subsystemProtect, "carbon_monoxide_state_detail"),
 		"Battery is low",
 		protectLabels,
 		nil,
 	)
 	protectSmokeStateDetail = prometheus.NewDesc(
-		prometheus.BuildFQName(namespace, subsystemProtect, "battery_low"),
+		prometheus.BuildFQName(namespace, subsystemProtect, "smoke_state_detail"),
 		"Battery is low",
 		protectLabels,
 		nil,
